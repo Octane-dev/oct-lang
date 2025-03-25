@@ -1,0 +1,46 @@
+!COMPILE --> octanium/[main].
+!!ignore (test file)
+c[constant] == "bonjour"
+v[test] == 1
+v[yus] == "hola"
+v[number] == 0
+!!v[aaaa]==56
+v[yee]== "hello"+"bob"
+!!v[inputyey] == i["input {{test}}: "]
+!!display["Hello, {{inputyey}}"]
+!!v[bobman] == sqrt[25]
+
+f[test(constant,test,number) --> {
+  v[bobbyman] == 2
+  c[asosaosaosa] == "bob"
+  display["FUNCTION BOYS: {{test}}"] !! stop variables passing in.
+  l[con = logic] ==> c(number <= test) --> {
+    display["poopy"]
+  }
+  !!r[bobbyman] return value of bobbyman
+}]
+
+v[looper] == 0
+
+l[con = loop] ==> c(5) --> {
+  v[looper] == looper + 1
+}
+display["Total: {{looper}}"]
+
+v[man] == r[test(constant,test,number)]
+r[test(constant,test,number)]
+!!display[man]
+
+display["Hello, world!"]
+display[test]
+display["Yo, the message is {{yus}} and the number is {{test}}."]
+display["Hey! The number is {{test}}."]
+display[number]
+display[yee]
+!!display[bobman]
+!!display["hello"+"world"] needs to be implemented
+
+
+
+!!v[abx] == number+test -- so this doesnt work yet but needs to (add number variables)
+!!display[abx] -- this too
